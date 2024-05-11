@@ -2,7 +2,8 @@
  * @param {number[]} height
  * @return {number}
  */
-var maxArea = function (height) {
+
+ var maxArea = function (height) {
     
     let maxJ =0;
     let maxI =0;
@@ -22,3 +23,21 @@ var maxArea = function (height) {
     }
     return area;
 };
+
+
+// var maxArea = function (height) {
+    
+//     let left =0, right =height.length -1, area=0;
+    
+//     while(left < right){
+//         let area1 = Math.min(height[left], height[right]) * (right -left)
+//         area = Math.max(area, area1)
+//         if(height[left]< height[right]){
+//             left++;
+//         }else{
+//             right--;
+//         }
+//     }
+  
+//   return area;
+// };
