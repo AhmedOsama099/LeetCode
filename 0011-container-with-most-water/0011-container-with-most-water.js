@@ -11,10 +11,8 @@ var maxArea = function (height) {
         if(maxI < height[i] ){
         for (let j = height.length - 1; j > i; j--) {
             if( maxJ < height[j]){
-            let height1 = height[i] < height[j] ? height[i] : height[j]
-            let width1 = j - i
-            let area1 = width1 * height1;
-            area = area > area1 ? area : area1
+            let area1 =  Math.min(height[i], height[j]) * (j - i);
+            area =  Math.max(area, area1)
             maxJ = height[j]
             }
         }
