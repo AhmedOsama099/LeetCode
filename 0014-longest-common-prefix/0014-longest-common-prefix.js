@@ -18,9 +18,8 @@ var checkCommon = function (str1, str2) {
 var longestCommonPrefix = function (strs) {
     if (strs.length <= 1) return strs[0]
 
-    let commonPerfix = checkCommon(strs[0], strs[1])
-
-    for (let i = 2; i < strs.length; i++) {
+    let commonPerfix = strs[0]
+    for (let i = 1; i < strs.length; i++) {
         commonPerfix = checkCommon(commonPerfix, strs[i])
     }
     return commonPerfix
