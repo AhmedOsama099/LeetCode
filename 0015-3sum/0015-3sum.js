@@ -11,7 +11,6 @@ var threeSum = function (nums) {
         while (right < left) {
             let res = nums[i] + nums[right] + nums[left]
             if (!res) {
-                let stringArr = JSON.stringify([nums[i], nums[right], nums[left]].sort());
                 result.push([nums[i], nums[right], nums[left]]);
                 left--
                 right++
