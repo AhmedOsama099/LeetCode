@@ -9,8 +9,10 @@ var canBeValid = function (s, locked) {
 
     let openCount = 0;
     for (let i = 0; i < n; i++) {
+        // if ( and 0 -- ( and 1 -- ) and 0
         if (s[i] === '(' || locked[i] === '0') {
             openCount++;
+         // if ) and 1
         } else {
             openCount--;
         }
