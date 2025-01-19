@@ -4,6 +4,22 @@
  */
 var canMakeArithmeticProgression = function (arr) {
 
+    if (arr.length < 2) return true
+
+    arr.sort((a, b) => a - b);
+    let standardVal = arr[1] - arr[0];
+
+    for (let i = 1; i < arr.length - 1; i++) {
+        val = arr[i + 1] - arr[i]
+        if (val !== standardVal) {
+            return false
+        }
+    }
+
+    return true
+
+/* -- Optimum Solution
+
     const n = arr.length;
 
     // Find the minimum and maximum elements in the array
@@ -11,8 +27,8 @@ var canMakeArithmeticProgression = function (arr) {
     const max = Math.max(...arr);
 
     // Calculate the common difference
-    if ((max - min) % (n - 1) !== 0) return false;
     const diff = (max - min) / (n - 1);
+    if ((max - min) % (n - 1) !== 0) return false;
 
     // Use a Set to check if all expected elements are present
     const seen = new Set(arr);
@@ -23,7 +39,8 @@ var canMakeArithmeticProgression = function (arr) {
         }
     }
 
-    return true;
+    return true; 
+*/
 
 
 };
