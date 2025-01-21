@@ -3,7 +3,6 @@
  * @return {number}
  */
 var possibleStringCount = function (word) {
-
     let counter = 1;
     let i = 0;
     let j = word.length - 1
